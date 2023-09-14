@@ -49,7 +49,7 @@ branched rollout的理论基础
 
 Proof:
 
-![\<img alt="" data-attachment-key="C5DC2T7X" width="774" height="391" src="attachments/C5DC2T7X.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/C5DC2T7X.png)
+![\<img alt="" data-attachment-key="C5DC2T7X" width="774" height="391" src="attachments/C5DC2T7X.png" ztype="zimage">](attachments/C5DC2T7X.png)
 
 ### Lemma 2
 
@@ -66,11 +66,11 @@ Proof：
 
 先用t-1时刻的状态访问分布表示t时刻的状态分布差，用的还是lemma1的技巧
 
-![\<img alt="" data-attachment-key="CIDC33HA" width="798" height="270" src="attachments/CIDC33HA.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/CIDC33HA.png)
+![\<img alt="" data-attachment-key="CIDC33HA" width="798" height="270" src="attachments/CIDC33HA.png" ztype="zimage">](attachments/CIDC33HA.png)
 
 由此可以进行递归推导：
 
-![\<img alt="" data-attachment-key="UWWLVS5E" width="747" height="316" src="attachments/UWWLVS5E.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/UWWLVS5E.png)
+![\<img alt="" data-attachment-key="UWWLVS5E" width="747" height="316" src="attachments/UWWLVS5E.png" ztype="zimage">](attachments/UWWLVS5E.png)
 
 最后一步是因为初始状态分布相同， <img src="https://www.zhihu.com/equation?tex=\boldsymbol{\epsilon}_{0}=0" alt="\boldsymbol{\epsilon}_{0}=0" class="ee_img tr_noresize" eeimg="1"> 
 
@@ -87,7 +87,7 @@ Proof：
 
 Proof:
 
-![\<img alt="" data-attachment-key="XNVL3EBV" width="499" height="321" src="attachments/XNVL3EBV.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/XNVL3EBV.png)
+![\<img alt="" data-attachment-key="XNVL3EBV" width="499" height="321" src="attachments/XNVL3EBV.png" ztype="zimage">](attachments/XNVL3EBV.png)
 
 先推导 <img src="https://www.zhihu.com/equation?tex=\delta=\epsilon_{m}+\epsilon_{\pi}" alt="\delta=\epsilon_{m}+\epsilon_{\pi}" class="ee_img tr_noresize" eeimg="1"> 
 
@@ -160,7 +160,7 @@ Proof:
 
 直接应用Lemma3只会推导出关于model误差的下界（policy相同），所以引入 <img src="https://www.zhihu.com/equation?tex=\pi_D" alt="\pi_D" class="ee_img tr_noresize" eeimg="1">  ：
 
-![\<img alt="" data-attachment-key="LC24MRI6" width="427" height="74" src="attachments/LC24MRI6.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/LC24MRI6.png)
+![\<img alt="" data-attachment-key="LC24MRI6" width="427" height="74" src="attachments/LC24MRI6.png" ztype="zimage">](attachments/LC24MRI6.png)
 
 L1存在分布偏移，没有model误差
 
@@ -178,7 +178,7 @@ L2既有分布偏移又有model误差
 
 加起来就是目标
 
-![\<img alt="" data-attachment-key="H2SBWBD2" width="489" height="114" src="attachments/H2SBWBD2.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/H2SBWBD2.png)
+![\<img alt="" data-attachment-key="H2SBWBD2" width="489" height="114" src="attachments/H2SBWBD2.png" ztype="zimage">](attachments/H2SBWBD2.png)
 
 通过这个结果我们可以得到以下启发，当model error很大时：
 
@@ -219,7 +219,7 @@ L2既有分布偏移又有model误差
 
 沿时间求和：
 
-![\<img alt="" data-attachment-key="MSWBA3AR" width="907" height="305" src="attachments/MSWBA3AR.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/MSWBA3AR.png)
+![\<img alt="" data-attachment-key="MSWBA3AR" width="907" height="305" src="attachments/MSWBA3AR.png" ztype="zimage">](attachments/MSWBA3AR.png)
 
 参考Lemma 3，再乘以 <img src="https://www.zhihu.com/equation?tex= \frac{2r_{\operatorname*{max}}}{1-\gamma}  " alt=" \frac{2r_{\operatorname*{max}}}{1-\gamma}  " class="ee_img tr_noresize" eeimg="1"> 就得到了目标
 
@@ -227,13 +227,13 @@ L2既有分布偏移又有model误差
 
 Theorem1在branched rollout的情况下，可以得到下界（ <img src="https://www.zhihu.com/equation?tex= \mathrm{max}_{t}\,E_{s\sim\pi_{t}}[D_{T V}(p(s^{\prime}|s,a)||\hat{p}(s^{\prime}|s,a))]\,\le\,\epsilon_{m^{\prime}}  " alt=" \mathrm{max}_{t}\,E_{s\sim\pi_{t}}[D_{T V}(p(s^{\prime}|s,a)||\hat{p}(s^{\prime}|s,a))]\,\le\,\epsilon_{m^{\prime}}  " class="ee_img tr_noresize" eeimg="1">  ）：
 
-![\<img alt="" data-attachment-key="BTWNT5LS" width="618" height="76" src="attachments/BTWNT5LS.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/BTWNT5LS.png)
+![\<img alt="" data-attachment-key="BTWNT5LS" width="618" height="76" src="attachments/BTWNT5LS.png" ztype="zimage">](attachments/BTWNT5LS.png)
 
 Proof：
 
 同样为了在结果中引入分布偏移误差，定义 <img src="https://www.zhihu.com/equation?tex= \eta^{\pi_{D},\pi}  " alt=" \eta^{\pi_{D},\pi}  " class="ee_img tr_noresize" eeimg="1"> 表示前半段在真实MDP使用 <img src="https://www.zhihu.com/equation?tex=\pi_D" alt="\pi_D" class="ee_img tr_noresize" eeimg="1"> 采样，后半段在真实MDP使用 <img src="https://www.zhihu.com/equation?tex=\pi" alt="\pi" class="ee_img tr_noresize" eeimg="1"> 进行采样得到的回报
 
-![\<img alt="" data-attachment-key="57XDKIDJ" width="487" height="81" src="attachments/57XDKIDJ.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/57XDKIDJ.png)
+![\<img alt="" data-attachment-key="57XDKIDJ" width="487" height="81" src="attachments/57XDKIDJ.png" ztype="zimage">](attachments/57XDKIDJ.png)
 
 L1只有分布偏移没有model误差：
 
@@ -264,7 +264,7 @@ Proof:
 
 定义 <img src="https://www.zhihu.com/equation?tex= \eta^{\pi_{D},\hat{\pi}_D}  " alt=" \eta^{\pi_{D},\hat{\pi}_D}  " class="ee_img tr_noresize" eeimg="1"> 是前半段在真实MDP，后半段在model采样，都使用* * <img src="https://www.zhihu.com/equation?tex=\pi_D" alt="\pi_D" class="ee_img tr_noresize" eeimg="1"> 得到的回报
 
-![\<img alt="" data-attachment-key="LDYQA4AL" width="541" height="89" src="attachments/LDYQA4AL.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/LDYQA4AL.png)
+![\<img alt="" data-attachment-key="LDYQA4AL" width="541" height="89" src="attachments/LDYQA4AL.png" ztype="zimage">](attachments/LDYQA4AL.png)
 
 L3:
 
@@ -289,31 +289,31 @@ L4:
 
 作者通过实验发现model误差确实会随着分布偏移误差的增加而增加
 
-![\<img alt="" data-attachment-key="INNMCQZ4" width="940" height="323" src="attachments/INNMCQZ4.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/INNMCQZ4.png)
+![\<img alt="" data-attachment-key="INNMCQZ4" width="940" height="323" src="attachments/INNMCQZ4.png" ztype="zimage">](attachments/INNMCQZ4.png)
 
 然而model误差增加的速率是和训练model的数据集大小有关系的（测量 <img src="https://www.zhihu.com/equation?tex=\epsilon_{\pi}=0" alt="\epsilon_{\pi}=0" class="ee_img tr_noresize" eeimg="1"> 处的斜率 ）：
 
-![\<img alt="" data-attachment-key="T2QRPNGP" width="837" height="254" src="attachments/T2QRPNGP.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/T2QRPNGP.png)
+![\<img alt="" data-attachment-key="T2QRPNGP" width="837" height="254" src="attachments/T2QRPNGP.png" ztype="zimage">](attachments/T2QRPNGP.png)
 
 这说明增加数据集的大小可以增加model的泛化能力，即使使用 <img src="https://www.zhihu.com/equation?tex=\pi_D" alt="\pi_D" class="ee_img tr_noresize" eeimg="1"> 以外的数据评估，也具有较小的model error
 
 之前是通过在 <img src="https://www.zhihu.com/equation?tex=\pi_D" alt="\pi_D" class="ee_img tr_noresize" eeimg="1"> 中采样数据来衡量model error，上面的实验启发我们估计一个model error和 <img src="https://www.zhihu.com/equation?tex=\epsilon_{\pi}" alt="\epsilon_{\pi}" class="ee_img tr_noresize" eeimg="1"> 的关系，使用线性函数近似估计：
 
-![\<img alt="" data-attachment-key="3H7XYQ75" width="240" height="69" src="attachments/3H7XYQ75.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/3H7XYQ75.png)
+![\<img alt="" data-attachment-key="3H7XYQ75" width="240" height="69" src="attachments/3H7XYQ75.png" ztype="zimage">](attachments/3H7XYQ75.png)
 
 也就是Theorem 2
 
-![\<img alt="" data-attachment-key="Y3TRW2W4" width="624" height="82" src="attachments/Y3TRW2W4.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/Y3TRW2W4.png)
+![\<img alt="" data-attachment-key="Y3TRW2W4" width="624" height="82" src="attachments/Y3TRW2W4.png" ztype="zimage">](attachments/Y3TRW2W4.png)
 
 这个式子启发我们当model error很小的情况下，有
 
-![\<img alt="" data-attachment-key="ZER9JEH7" width="465" height="52" src="attachments/ZER9JEH7.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/ZER9JEH7.png)
+![\<img alt="" data-attachment-key="ZER9JEH7" width="465" height="52" src="attachments/ZER9JEH7.png" ztype="zimage">](attachments/ZER9JEH7.png)
 
 也就是随着model error的降低，我们可以采用更长的rollout
 
 可以得出一个算法
 
-![\<img alt="" data-attachment-key="VQMWH793" width="924" height="320" src="attachments/VQMWH793.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/VQMWH793.png)
+![\<img alt="" data-attachment-key="VQMWH793" width="924" height="320" src="attachments/VQMWH793.png" ztype="zimage">](attachments/VQMWH793.png)
 
 ## <span style="background-color: #f1983780">Experiments</span>
 
@@ -322,15 +322,15 @@ L4:
 *   predictive model: 使用ensemble随机模型，rollout时每次随机选取一个model
 *   policy optimization：SAC
 
-![\<img alt="" data-attachment-key="H9K3SVEY" width="948" height="462" src="attachments/H9K3SVEY.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/H9K3SVEY.png)
+![\<img alt="" data-attachment-key="H9K3SVEY" width="948" height="462" src="attachments/H9K3SVEY.png" ztype="zimage">](attachments/H9K3SVEY.png)
 
 ### Performance
 
-![\<img alt="" data-attachment-key="HDXM85ZL" width="887" height="563" src="attachments/HDXM85ZL.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/HDXM85ZL.png)
+![\<img alt="" data-attachment-key="HDXM85ZL" width="887" height="563" src="attachments/HDXM85ZL.png" ztype="zimage">](attachments/HDXM85ZL.png)
 
 简直降维打击
 
-![\<img alt="" data-attachment-key="HSEC6BP6" width="933" height="334" src="attachments/HSEC6BP6.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/HSEC6BP6.png)
+![\<img alt="" data-attachment-key="HSEC6BP6" width="933" height="334" src="attachments/HSEC6BP6.png" ztype="zimage">](attachments/HSEC6BP6.png)
 
 ### No model
 
@@ -344,7 +344,7 @@ mbpo中梯度更新次数和采样环境步数之间的比例很高，在SAC中�
 
 使用MVE和STEVE的方法估计Q函数
 
-![\<img alt="" data-attachment-key="X6GTC5YW" width="506" height="90" src="attachments/X6GTC5YW.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/X6GTC5YW.png)
+![\<img alt="" data-attachment-key="X6GTC5YW" width="506" height="90" src="attachments/X6GTC5YW.png" ztype="zimage">](attachments/X6GTC5YW.png)
 
 虽然比SAC好，但是相较于MBPO没有提升
 
@@ -352,11 +352,11 @@ mbpo中梯度更新次数和采样环境步数之间的比例很高，在SAC中�
 
 首先对比policy在真实环境和model训练下的效果，发现获得的回报非常一致，说明在短的rollout的情况下，model可以较好表示真实MDP
 
-![\<img alt="" data-attachment-key="Q4GG2332" width="280" height="300" src="attachments/Q4GG2332.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/Q4GG2332.png)
+![\<img alt="" data-attachment-key="Q4GG2332" width="280" height="300" src="attachments/Q4GG2332.png" ztype="zimage">](attachments/Q4GG2332.png)
 
 同时又可视化了rollout效果，a是在真实环境rollout 450步，b是使用同样的动作序列在model中rollout 1000次，阴影部分表示方差，方差随着时间序列的增大表示了model error的累积
 
-![\<img alt="" data-attachment-key="TF52G88K" width="568" height="305" src="attachments/TF52G88K.png" ztype="zimage">](https://github.com/DinoMax00/Markdown4Zhihu/tree/master/Data/MBPO/TF52G88K.png)
+![\<img alt="" data-attachment-key="TF52G88K" width="568" height="305" src="attachments/TF52G88K.png" ztype="zimage">](attachments/TF52G88K.png)
 
 通过在其他环境试验，本文还发现**MBPO倾向于低估环境奖励**
 
